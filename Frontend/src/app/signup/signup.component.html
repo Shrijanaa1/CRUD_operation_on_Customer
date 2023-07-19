@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="wrapper">
+    <div class="title"><span>Register Here</span></div>
+
+    <p class="text-center fs-3" [ngClass] = "isAccountCreated ? 'text-success pb-1':'text-danger pb-1'"> {{displayMsg}} </p>
+  
+        <form [formGroup] = "registerForm" class="col-lg-7 col-md-9 col-sm-11 mx-auto mt-5" action="" (ngSubmit)="registerSubmit()">
+        
+        <div class = "row form-group">
+          <input type="text" placeholder="fname" formControlName="fname" id="fname" class="form-control">
+          <div class="form-text abc" *ngIf="fname.errors?.['required'] && (fname.dirty||fname.touched)">Username(Firstname) is required</div>
+        </div>
+  
+        <div class=" row form-group">
+          <input type="email" placeholder="Email" formControlName="email" id="email" class="form-control">
+          <div class="form-text abc" *ngIf="email.errors?.['required'] && (email.dirty||email.touched)">Email is required</div>
+          <div class="form-text abc" *ngIf="email.errors?.['email'] && (email.dirty||email.touched)">Email is Invalid</div>
+
+        </div>
+  
+        <div class="row form-group">
+          <input type="password" placeholder="Password" formControlName="password" id="password" class="form-control">
+          <div class="form-text abc" *ngIf="password.errors?.['required'] && (password.dirty||password.touched)">Password is Required</div>
+        </div>
+  
+        <div class="row form-group">
+          <input type="password" placeholder="Confirm password" formControlName="confirmPassword" id="confirmPassword" class="form-control">
+          <div class="form-text abc" [ngStyle]= "{'display':repeatPassword}">Repeat password is  Invalid</div>
+        </div>
+
+        <div class="row button">
+          <button type="submit" class="btn mt-6" [disabled] = "registerForm.invalid" >Register</button>
+        </div>
+
+      </form>
+    </div>
+  </div> 

@@ -1,1 +1,39 @@
-<app-customer-list></app-customer-list>
+<app-navbar></app-navbar>
+
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" routerLink="customers" routerLinkActive="active">
+          <img src="assets/student.jpg" alt="Logo" width="30" height="30" class="me-2">
+          Customer Management System
+        </a>
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a  routerLink="customers" routerLinkActive="active" class="nav-link">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a  routerLink="create-customer" routerLinkActive="active" class="nav-link">Add Customer</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  <div class="container">
+    <!-- <app-customer-list></app-customer-list> -->
+
+    <!-- Instead of selector this directive is used to -->
+    <!-- to update our template to dynamically load a component based on url path.-->
+    <router-outlet></router-outlet>
+  </div>
+  
+    <footer class="footer">
+        <div class="container">
+            <span>All rights reserved 2023 @ShrijanaKarki </span>
+        </div>
+    </footer>
+<!-- </div> -->
+
+
+
+
+
+

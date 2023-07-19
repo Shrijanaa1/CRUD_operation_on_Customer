@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="wrapper">
+    <div class="title"><span>Login Form</span></div>
+    <!-- <form  #loginForm="ngForm"> -->
+      <form [formGroup] = "loginForm" (ngSubmit) = "loginSubmitted()">
+      <div class="row">
+        <i class="fas fa-user"></i>
+        
+        <input type="email" placeholder="Email" formControlName="email">
+        <div class="form-text abc" *ngIf="email.errors?.['required'] && (email.dirty||email.touched)">Email is required</div>
+        <div class="form-text abc" *ngIf="email.errors?.['email'] && (email.dirty||email.touched)">Email is Invalid</div>
+      </div>
+      <div class="row">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" formControlName="password">
+        <div class="form-text abc" *ngIf="password.errors?.['required'] && (password.dirty||password.touched)">Password is required</div>
+
+      </div>
+      <!-- <div class="pass"><a href="#">Forgot password?</a></div> -->
+      <div class="row button">
+        <!-- <button type="submit" class="btn" [disabled]="loginForm.invalid">Login</button> -->
+        <button type="submit" class="btn" [disabled]="loginForm.invalid">Login</button>
+      </div>
+      <div class="signup-link"> Not registered? <a routerLink="/signup" routerLinkActive="active">Register now</a></div>
+    </form>
+  </div>
+</div>  

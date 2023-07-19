@@ -1,0 +1,6 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.footer {
+    padding: 14px;
+    position: fixed;
+  }

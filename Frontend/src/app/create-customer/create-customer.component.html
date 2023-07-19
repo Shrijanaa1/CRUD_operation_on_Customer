@@ -1,0 +1,97 @@
+<div class="col-md-6 offset-md-3">
+
+    <h3> Create Customer </h3>
+
+        <form (ngSubmit) = "OnSubmit()" >
+            
+
+            <div class="form-group mt-2">
+                <label>Full Name</label>
+                <input type="text" name="fname" class="form-control" id="fname" [(ngModel)] = "customer.fname" />
+
+                <!-- <input type="text" formControlName="fname" class="form-control" [(ngModel)] = "customer.fname" [ngClass]="{ 'is-invalid': submitted && f['fname'].errors }" /> -->
+                <!-- <div *ngIf="submitted && f['fname'].errors" class="invalid-feedback">
+                  <div *ngIf="f['fname'].errors['required']">Fullname is required</div>
+                </div> -->
+              </div>
+
+            
+
+            <div class="form-group mt-2">
+                <label>Last Name:</label>
+                <input type="text" class="form-control" id="lname" [(ngModel)] = "customer.lname" name="lname">
+            </div>
+
+            <div class="form-group mt-2">
+                <label>Email:</label>
+                <input type="text" class="form-control" id="emaiil" [(ngModel)] = "customer.email" name="email">
+            </div>
+
+
+            <button class="btn btn-success mt-2" type="submit">Submit</button>
+
+        </form>
+    </div>
+
+
+    <!-- <div class="col-md-6 offset-md-3">
+        <h3>Create Customer</h3>
+      
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group mt-2">
+            <label>Full Name:</label>
+            <input type="text" formControlName="fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['fname'].invalid }" />
+            <div *ngIf="submitted && f['fname'].invalid" class="invalid-feedback">
+                <div *ngIf="f['fname'].errors['required']">Fullname is required</div>
+            </div>
+          </div>
+      
+          <div class="form-group mt-2">
+            <label>Last Name:</label>
+            <input type="text" formControlName="lname" class="form-control" />
+          </div>
+      
+          <div class="form-group mt-2">
+            <label>Email:</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].invalid }" />
+            <div *ngIf="submitted && f['email'].invalid" class="invalid-feedback">
+                <div *ngIf="f['emaiil'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors.email">Invalid email format.</div>
+            </div>
+          </div>
+      
+          <button class="btn btn-success mt-2" type="submit">Submit</button>
+        </form>
+      </div> -->
+      
+
+      <!-- <div class="col-md-6 offset-md-3">
+        <h3>Create Customer</h3>
+      
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group mt-2">
+            <label>Full Name:</label>
+            <input type="text" formControlName="fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['fname'].invalid }" />
+            <div *ngIf="submitted && f['fname'].invalid" class="invalid-feedback">
+              <div *ngIf="f['fname'].errors?.required">Full Name is required.</div>
+            </div>
+          </div>
+      
+          <div class="form-group mt-2">
+            <label>Last Name:</label>
+            <input type="text" formControlName="lname" class="form-control" />
+          </div>
+      
+          <div class="form-group mt-2">
+            <label>Email:</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].invalid }" />
+            <div *ngIf="submitted && f['email'].invalid" class="invalid-feedback">
+              <div *ngIf="f['email'].errors?.required">Email is required.</div>
+              <div *ngIf="f['email'].errors?.email">Invalid email format.</div>
+            </div>
+          </div>
+      
+          <button class="btn btn-success mt-2" type="submit">Submit</button>
+        </form>
+      </div>
+       -->

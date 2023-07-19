@@ -1,19 +1,29 @@
 <h2>Customer List</h2>
-<table>
+<table class="table table-striped">
     <thead>
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Password</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         <!-- ngFor used to iterate over list of customer -->
         <!-- customers is arrray we define in component.. we are iterating over Customer array -->
         <tr *ngFor = "let customer of customers" >
-            <td> {{ customer.firstname }} </td>
-            <td> {{ customer.lastname }} </td>
+            
+            <td> {{ customer.fname }} </td>
+            <td> {{ customer.lname }} </td>
             <td> {{ customer.email }} </td>
+            <td> {{ customer.password }} </td>
+            <td>
+                <button (click) = "viewCustomer(customer.id)" class="btn btn-success">View</button>
+                <button (click) = "updateCustomer(customer.id)" class="btn btn-primary" style="margin-left: 10px;">Update</button>
+                <button (click) = "deleteCustomer(customer.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+        
         </tr>
     </tbody>
 </table>

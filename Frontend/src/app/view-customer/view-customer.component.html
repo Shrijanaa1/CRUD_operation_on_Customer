@@ -1,0 +1,33 @@
+<!-- <h3> Customer Details</h3>
+
+<div class="customer-details-container">
+    <div>
+        <label> <b> First Name: </b></label> {{customer.fname}}
+    </div>
+    <div>
+        <label> <b> Last Name: </b></label> {{customer.lname}}
+    </div>
+    <div>
+        <label> <b> Email: </b></label> {{customer.email}}
+    </div>
+</div> -->
+
+<div class="customer-details-container">
+    <h3>Customer Details</h3>
+    <div class="customer-table">
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <td>{{customer.fname}}</td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>{{customer.lname}}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{customer.email}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

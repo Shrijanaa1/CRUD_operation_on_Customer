@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+
+    <h3> Update Customer Details </h3>
+
+        <form (ngSubmit) = "OnSubmit()" >
+            <div class="form-group mt-2">
+                <label>First Name:</label>
+                <input type="text" class="form-control" id="fname" [(ngModel)] = "customer.fname" name="fname">
+            </div>
+
+            <!-- ngModel used for two way data binding -->
+
+            <div class="form-group mt-2">
+                <label>Last Name:</label>
+                <input type="text" class="form-control" id="lname" [(ngModel)] = "customer.lname" name="lname">
+            </div>
+
+            <div class="form-group mt-2">
+                <label>Emaili:</label>
+                <input type="text" class="form-control" id="emaiil" [(ngModel)] = "customer.email" name="email">
+            </div>
+
+            <button class="btn btn-success mt-2" type="submit">Submit</button>
+
+        </form>
+    </div>
